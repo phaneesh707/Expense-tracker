@@ -11,7 +11,7 @@ class NavBar extends Component {
 					<Nav.Link href="/home">Home</Nav.Link>
 					<Nav.Link href="/expenses">Expenses</Nav.Link>
 					<Nav.Link href="/add">Add</Nav.Link>
-					<Nav.Link href="#pricing">Statistic</Nav.Link>
+					<Nav.Link href="/statistic">Statistic</Nav.Link>
 				</Nav>
 				</Navbar>
 			</div>

@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import Expenses from "./Expenses"
 import AddExpense from './AddExpense'
+import Analytic from './Analytic'
 
 
 class Main extends Component {
@@ -19,6 +20,7 @@ class Main extends Component {
 					<Route exact path='/home' component={Home} />
 					<Route exact path='/expenses' component={Expenses} />
 					<Route exact path='/add' component={AddExpense} />
+					<Route exact path='/statistic' component={Analytic} />
 				</Switch>
 			</div>
         )
