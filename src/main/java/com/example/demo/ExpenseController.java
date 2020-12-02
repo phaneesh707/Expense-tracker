@@ -22,7 +22,7 @@ public class ExpenseController {
 	@GetMapping("/expenses")
 	@ResponseBody
 	public List<Expense> getExpenses() {	
-		return (List<Expense>) expenseRepository.findAll();
+		return (List<Expense>) expenseRepository.findAllByOrderByDateDesc();
 	}
 	
 	@CrossOrigin(origins="http://localhost:3000")
