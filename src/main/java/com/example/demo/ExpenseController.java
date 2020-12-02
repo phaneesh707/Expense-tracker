@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +43,17 @@ public class ExpenseController {
 	@CrossOrigin(origins="http://localhost:3000")
 	@PostMapping("/add")
 	public void addExpense(@RequestBody Expense expense) {
-		System.out.println("Added Expenses");
 		expenseRepository.save(expense);
+	}
+	
+	@CrossOrigin(origins="http://localhost:3000")
+	@GetMapping("/recent")
+	@ResponseBody
+	public List<Expense> getRecentExpenses() {	
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DAY_OF_YEAR, -7);
+		String formattedDate = dateFormat.format(cal.getTime());
+		return expenseRepository.findAllByDateGreaterThanOrderByDateAsc(formattedDate);
 	}
 }

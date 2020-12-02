@@ -31,18 +31,17 @@ export default class Chart extends Component {
     }
 	
 	componentDidMount(){
-		axios.get('http://localhost:8080/expenses')
+		axios.get('http://localhost:8080/recent')
 		.then((response) => {
 			var i;
 			var temp = 0;
 			/* calculation for the days with multiple expenses entered */
 			for (i = 0; i < response.data.length; i++) {
-				if (i != (response.data.length - 1) && !response.data[i + 1].date.localeCompare(response.data[i].date)) {
+				if (i !== (response.data.length - 1) && !response.data[i + 1].date.localeCompare(response.data[i].date)) {
 					temp += response.data[i].cost;
 				} else {
 					temp += response.data[i].cost;
-					var day = response.data[i].date.substring(8, 10)
-					console.log(day);
+					var day = response.data[i].date.substring(8, 10);
 					this.dataPoints.push({
 						date: String(day),
 						spending: Number(temp),
