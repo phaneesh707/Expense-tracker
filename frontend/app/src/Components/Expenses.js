@@ -54,8 +54,8 @@ class Expenses extends Component  {
                         <Table>
 							<colgroup>
 								<col span="1" style={{width: '20%'}}/>
-								<col span="1" style={{width: '65%'}}/>
-								<col span="1" style={{width: '15%'}}/>
+								<col span="1" style={{width: '60%'}}/>
+								<col span="1" style={{width: '20%'}}/>
 							</colgroup>
 							
                             <thead className="thead-dark">

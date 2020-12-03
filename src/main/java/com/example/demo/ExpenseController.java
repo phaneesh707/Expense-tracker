@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
@@ -28,7 +29,7 @@ public class ExpenseController {
 	@CrossOrigin(origins="http://localhost:3000")
 	@GetMapping("/balance")
 	@ResponseBody
-	public double getBalance() {
+	public String getBalance() {
 		double balance = 0;
 		
 		List<Expense> expenses = expenseRepository.findAll();
@@ -36,8 +37,11 @@ public class ExpenseController {
 		for(int i = 0; i < expenses.size(); i++) {
 			balance += expenses.get(i).getCost();
 		}
+		System.out.println(balance);
+		DecimalFormat df = new DecimalFormat("#.##");
+		String formattedBalance = df.format(balance);
 		
-		return balance;
+		return formattedBalance;
 	}
 	
 	@CrossOrigin(origins="http://localhost:3000")
