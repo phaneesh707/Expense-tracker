@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy todir="F:\Mon hoc\CMPE 172\amy\Expense-Tracker\target/classes/public">
+    <fileset dir="F:\Mon hoc\CMPE 172\amy\Expense-Tracker/frontend/build"/>
+  </copy>
+</target>
+</project>
