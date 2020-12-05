@@ -17,7 +17,7 @@ Optional:
   2. Start Backend:\
         Run DemoApplication.java
   3. Start Frontend:\
-	Open terminal\
+        Open terminal\
         Navigate to frontend\app directory\
         Run “npm install”\
         Run “npm start”
