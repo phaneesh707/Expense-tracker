@@ -1,4 +1,6 @@
 **Expense Tracker Project for CMPE172**
+
+
 Group members: Hieu Hoang, Amy Lan-Anh Phan, Dongyoung Kim
 
 
@@ -19,12 +21,12 @@ Optional:
 **Steps to run application on localhost**
   1. Clone repository from github
   2. Start Backend:\
-        Run DemoApplication.java
+     &nbsp;&nbsp;&nbsp;Run DemoApplication.java
   3. Start Frontend:\
-     > Open terminal\
-     > Navigate to frontend\app directory\
-     > Run “npm install”\
-     > Run “npm start”
+     &nbsp;&nbsp;&nbsp;Open terminal\
+     &nbsp;&nbsp;&nbsp;Navigate to frontend\app directory\
+     &nbsp;&nbsp;&nbsp;Run “npm install”\
+     &nbsp;&nbsp;&nbsp;Run “npm start”
         
 The application should open on a browser.
 
