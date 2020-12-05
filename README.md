@@ -1,8 +1,10 @@
 **Project Description**
 
 Expense is an application that helps people keep track of their expenses. It is a 3-tier architecture application that uses React as its presentation tier, Java and Spring boot for its application tier, and Amazon RDS as its data tier.
-<br />
-<br />
+
+
+
+
 **Requirements to run application on localhost**
   - Java JDK
   - Maven
@@ -10,8 +12,10 @@ Expense is an application that helps people keep track of their expenses. It is 
   
 Optional:
   - MySql Client to view database
-<br />
-<br />
+
+
+
+
 **Steps to run application on localhost**
   1. Clone repository from github
   2. Start Backend:
@@ -23,8 +27,11 @@ Optional:
         Run “npm start”
         
 The application should open on a browser.
-<br />
-<br />
+
+
+
+
+
 **To run Backend on Docker on localhost**
   1. Open Terminal
   2. Navigate to the main directory containing the Dockerfile
