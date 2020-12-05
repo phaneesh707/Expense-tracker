@@ -1,6 +1,10 @@
-**Project Description**
+**Expense Tracker Project for CMPE172**
+Group members: Hieu Hoang, Amy Lan-Anh Phan, Dongyoung Kim
 
-Expense is an application that helps people keep track of their expenses. It is a 3-tier architecture application that uses React as its presentation tier, Java and Spring boot for its application tier, and Amazon RDS as its data tier.
+
+**Description**
+
+Expense tracker is an application that helps people keep track of their expenses. It is a 3-tier architecture application that uses React as its presentation tier, Java and Spring boot for its application tier, and Amazon RDS as its data tier.
 
 
 **Requirements to run application on localhost**
@@ -17,10 +21,10 @@ Optional:
   2. Start Backend:\
         Run DemoApplication.java
   3. Start Frontend:\
-        Open terminal\
-        Navigate to frontend\app directory\
-        Run “npm install”\
-        Run “npm start”
+     > Open terminal\
+     > Navigate to frontend\app directory\
+     > Run “npm install”\
+     > Run “npm start”
         
 The application should open on a browser.
 
