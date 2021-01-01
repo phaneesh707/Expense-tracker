@@ -8,6 +8,8 @@ Team members: Hieu Hoang, Amy Lan-Anh Phan, Dongyoung Kim
 
 Expense tracker is an application that helps people keep track of their expenses. It is a 3-tier architecture application that uses React as its presentation tier, Java and Spring boot for its application tier, and Amazon RDS as its data tier. The application allow users to view their expenses and balance, add an expense, and view a chart that shows them how much they've spent each day for the past 7 days.
 
+To use the application, you will need to create a database. Put the database credentials in application.properties file to use application.
+
 
 **Requirements to run application on localhost**
   - Java JDK
