@@ -31,11 +31,3 @@ Optional:
      &nbsp;&nbsp;&nbsp;Run “npm start”
         
 The application should open on a browser.
-
-
-**To run Backend on Docker on localhost**
-  1. Open Terminal
-  2. Navigate to the main directory containing the Dockerfile
-  3. Run “docker build -t expense-tracker .” (this will take some time)
-  4. Run “docker run -p 8080:8080 expense-tracker”
-  5. Then start Frontend on a new terminal
