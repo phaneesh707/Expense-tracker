@@ -1,9 +1,11 @@
-package com.example.demo;
+package com.example.demo.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,23 +16,30 @@ public class Expense {
 	private Long id;
 	
 	private String date;
+
+	private String title;
+
+	private String category;
 	
 	private String description;
 	
 	private Double cost;
 	
-	private String user;
+	@ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 	
 	public Expense() {
 		
 	}
 	
-	public Expense(Long id, String date, String description, Double cost, String user) {
+	public Expense(Long id, String date, String description, Double cost,String title,String category) {
 		this.id = id;
 		this.date = date;
+		this.title = title;
+		this.category = category;
 		this.description = description;
 		this.cost = cost;
-		this.user = user;
 	}
 	
 	public Long getId() {
@@ -49,6 +58,23 @@ public class Expense {
 		this.date = date;
 	}
 
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	public String getDescription() {
 		return description;
 	}
@@ -65,11 +91,11 @@ public class Expense {
 		this.cost = cost;
 	}
 
-	public String getUser() {
+	public User getUser() {
 		return user;
 	}
 
-	public void setUser(String user) {
+	public void setUser(User user) {
 		this.user = user;
 	}
 }
