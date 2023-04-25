@@ -13,9 +13,9 @@ const NavBar = () => {
 	return (
 		<div>
 			<Navbar bg="dark" variant="dark">
-				<Navbar.Brand href="/home">Expense Tracker</Navbar.Brand>
+				<Navbar.Brand href="/expenses">Expense Tracker</Navbar.Brand>
 				<Nav className="mr-auto">
-					<Nav.Link href="/home">Home</Nav.Link>
+					{/* <Nav.Link href="/home">Home</Nav.Link> */}
 					<Nav.Link href="/expenses">Expenses</Nav.Link>
 					<Nav.Link href="/add">Add</Nav.Link>
 					<Nav.Link href="/statistic">Statistic</Nav.Link>

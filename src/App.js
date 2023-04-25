@@ -11,29 +11,26 @@ import { useEffect, useState } from "react";
 
 function App() {
   
-  const [isLoggedIn, setIsLoggedIn] = useState(
-    localStorage.getItem("isLoggedIn") === "true"
-  );
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  
+
 
  
   return (
     <div>
-      {
-        isLoggedIn ? <NavBar /> : null
-      }
-      
+        
       <BrowserRouter>
         <Routes>
+        {/* {isLoggedIn && <NavBar /> } */}
+        {/* <Route path='*' element={<NavBar/>} /> */}
         <Route
             path="/"
-            element={isLoggedIn ? <Home /> : <Navigate to="/login" />}
+            element={<><NavBar/> <Home /> </>}
           />
-          <Route path='/expenses' element={<Expenses/>} />
-          <Route path='/add' element={<AddExpense/>} />
-          <Route path='/statistic' element={<Chart/>} />
-          <Route path='/login' element={<Login/>} />
+          <Route path='/expenses' element={<><NavBar/><Expenses/></>} />
+          <Route path='/add' element={<><NavBar/><AddExpense/></>} />
+          <Route path='/statistic' element={<><NavBar/><Chart/></>} />
+          <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path='/signup' element={<SignUp/>} />
         </Routes>
          

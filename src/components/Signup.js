@@ -10,8 +10,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      
-      const response = await axios.post('http://localhost:8080/signup', {
+      const response = await axios.post('http://localhost:8080/register', {
         name,
         email,
         password,
@@ -24,6 +23,11 @@ const SignUp = () => {
     }
   };
 
+  const handleLogin = () => {
+    navigate('/login');
+  }
+
+  
   return (
     <Container>
       <Row className="justify-content-center mt-5">
@@ -64,6 +68,11 @@ const SignUp = () => {
               Sign Up
             </Button>
           </Form>
+
+          <p className='text-center mt-3'><span>OR</span></p>
+        <Button variant="dark" onClick={handleLogin} className="w-100 mt-3">
+              Already a user ? Login
+        </Button>
         </Col>
       </Row>
     </Container>

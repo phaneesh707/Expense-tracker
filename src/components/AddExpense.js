@@ -43,7 +43,7 @@ const AddExpense = (props) => {
 	
 
 	useEffect(() => {
-	  const userId = localStorage.getItem('userId');
+	  const userId = localStorage.getItem('userid');
 	  setUserId(userId);
 	}, [])
 	
@@ -68,6 +68,9 @@ const AddExpense = (props) => {
 								<option value='groceries'>Groceries</option>
 								<option value='bills'>Bills</option>
 								<option value='entertainment'>Entertainment</option>
+								<option value='transport'>Transport</option>
+								<option value='food'>Food</option>
+								<option value='health'>Helath</option>
 								<option value='travel'>Travel</option>
 							</select>
 						</div>

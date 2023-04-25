@@ -86,7 +86,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-const Login = () => {
+const Login = ({setIsLoggedIn}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate  = useNavigate();
@@ -101,12 +101,16 @@ const Login = () => {
       
       localStorage.setItem('isLoggedIn', true);
       localStorage.setItem('userid', response.data.id);
-      navigate('/Home');
+      setIsLoggedIn(true);
+      navigate('/expenses');
     } catch (error) {
       console.error(error);
     }
   };
 
+  const handleSingin = () => {
+    navigate('/signup');
+  }
   return (
     <Container>
       <Row className="justify-content-center mt-5">
@@ -139,7 +143,10 @@ const Login = () => {
               Login
             </Button>
           </Form>
-
+        <p className='text-center mt-3'><span>OR</span></p>
+        <Button variant="dark" onClick={handleSingin} className="w-100 mt-3">
+              New user ? Sign up
+        </Button>
         </Col>
       </Row>
     </Container>

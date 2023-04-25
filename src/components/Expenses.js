@@ -16,7 +16,8 @@ const Expenses = () => {
 
   useEffect(() => {
 
-    const id = localStorage.getItem('userId');
+    const id = localStorage.getItem('userid');
+    console.log(id)
     setUserId(id)
     axios
       .get(`http://localhost:8080/userexp/${id}`)
