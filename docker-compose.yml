@@ -24,7 +24,7 @@ services:
     container_name: app_backend
     volumes:
       - /app/node_modules
-      - ./backend:/app
+      - ./backend:/app   
 # MySQL
     environment: 
       MYSQL_HOST: mysql

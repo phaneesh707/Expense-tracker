@@ -87,7 +87,7 @@ public class ExpenseController {
 		return expenseRepository.findAllByDateGreaterThanOrderByDateAsc(formattedDate);
 	}
 
-
+//    -----------------------------------
 
 	//create expense
 	@CrossOrigin(origins="http://localhost:3000")
